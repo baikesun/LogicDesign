@@ -120,23 +120,18 @@ module	fnd_dec(     o_seg,
     reg         [6:0]       o_seg       ;
     
     always @(i_num) begin
-          case(i_num[0])
-              4'b0000  :  o_seg = 7'b1111110      ;
-              4'b0001  :  o_seg = 7'b0110000      ;
-              4'b0010  :  o_seg = 7'b1101101      ;
-              4'b0011  :  o_seg = 7'b1111001      ;
-              4'b0100  :  o_seg = 7'b0110011      ;
-              4'b0101  :  o_seg = 7'b1011011      ;
-              4'b0110  :  o_seg = 7'b1011111      ;
-              4'b0111  :  o_seg = 7'b1110000      ;
-              4'b1000  :  o_seg = 7'b1111111      ;
-              4'b1001  :  o_seg = 7'b1110011      ;
-              4'b1010  :  o_seg = 7'b0000000      ;
-              4'b1011  :  o_seg = 7'b0000000      ;
-              4'b1100  :  o_seg = 7'b0000000      ;
-              4'b1101  :  o_seg = 7'b0000000      ;
-              4'b1110  :  o_seg = 7'b0000000      ;
-              4'b1111  :  o_seg = 7'b0000000      ;
+          case(i_num)
+              default  :  o_seg = 7'b000_0000      ;
+              4'b0000  :  o_seg = 7'b111_1110      ;
+              4'b0001  :  o_seg = 7'b011_0000      ;
+              4'b0010  :  o_seg = 7'b110_1101      ;
+              4'b0011  :  o_seg = 7'b111_1001      ;
+              4'b0100  :  o_seg = 7'b011_0011      ;
+              4'b0101  :  o_seg = 7'b101_1011      ;
+              4'b0110  :  o_seg = 7'b101_1111      ;
+              4'b0111  :  o_seg = 7'b111_0000      ;
+              4'b1000  :  o_seg = 7'b111_1111      ;
+              4'b1001  :  o_seg = 7'b111_0011      ;
            endcase
     end
     
@@ -147,26 +142,24 @@ endmodule
 //	0~59 --> 2 Separated Segments
 //	--------------------------------------------------
 
-module	double_fig_sep(
-				                o_left,
+module	double_fig_sep(  o_left,
 				                o_right,
 				                i_double_fig    )         ;
 
     output	     [3:0]	  o_left		                  ;
-    output	     [3:0]	  o_right		                 ;
+    output	     [3:0]	  o_right		               ;
 
-    input	      [5:0]	  i_double_fig              ;
+    input	     [5:0]	  i_double_fig              ;
 
     assign	o_left = i_double_fig / 10             ;
-    assign	o_right  = i_double_fig % 10           ;
+    assign	o_right = i_double_fig % 10           ;
 
 endmodule
 
 //	--------------------------------------------------
 //	0~59 --> 2 Separated Segments
 //	--------------------------------------------------
-module	led_disp(
-				          o_seg,
+module	led_disp(  o_seg,
 				          o_seg_dp,
 				          o_seg_enb,
 				          i_six_digit_seg,
@@ -186,7 +179,7 @@ module	led_disp(
     wire		                   	gen_clk		                   ;
     
     nco		u_nco(	.o_gen_clk	( gen_clk		),
-            				.i_nco_num	( 32'd5000000	),
+            				.i_nco_num	( 32'd50000	),
 				        .clk		( clk			),
 				        .rst_n		( rst_n			))                      ;
 
@@ -194,7 +187,7 @@ module	led_disp(
     
     always @(posedge gen_clk or negedge rst_n) begin
 	       if(rst_n == 1'b0) begin
-		          cnt_common_node		<= 32'd0;
+		          cnt_common_node		<= 4'd0;
 	       end
 	       else begin
 		          if(cnt_common_node >= 4'd5) begin
@@ -282,10 +275,17 @@ module	top_nco_cnt_disp(  o_seg_enb,
     fnd_dec   u0_fnd_dec                  (     .o_seg          (  seg_left             ),
 				                                        .i_num          (  double_fig_sep_left  ));
 				                                        
-		fnd_dec   u1_fnd_dec                  (     .o_seg          (  seg_right            ),
-				                                        .i_num          (  double_fig_sep_right ));
+	 fnd_dec   u1_fnd_dec                  (     .o_seg          (  seg_right            ),
+				                                       .i_num          (  double_fig_sep_right ));
 				                                        
+	  //origin
 	  assign    six_digit_seg = {  {4{7'b0000000}}, seg_left, seg_right   }                 ;
+	  
+	  //quiz01
+	  //assign    six_digit_seg = {  {4{7'b1110111}}, seg_left, seg_right   }                 ;
+	  
+	  //quiz02
+	  //assign    six_digit_seg = {  seg_left, seg_right, seg_left, seg_right, seg_left, seg_right   }                 ;
 	  
 	  led_disp  u_led_disp                  (     .o_seg          (  o_seg                ),
 				                                        .o_seg_dp       (  o_seg_dp             ),
