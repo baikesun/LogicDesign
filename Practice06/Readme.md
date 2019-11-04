@@ -42,6 +42,15 @@
 
 ### **FPGA 동작 사진 (3개- 일반, Q1, Q2)**
 
+일반
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice06/quiz01.jpg)
+
+Q1
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice06/quiz02.jpg)
+
+Q2
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice06/quiz03.jpg)
+
 `Please fill up your source`
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTc1MDk4MDM1NiwtMTUxMzUzMjU0Nl19
