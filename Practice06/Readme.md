@@ -8,7 +8,11 @@
 : controller - mode, position 제어 / debounce 조절
 
 #### **Submodule 2** 
-: minsec - se
+: minsec - max_hit 받아서 sec 59 지나면 min 1 증가
+
+#### **Submodule 3** 
+: hms_cnt - min, sec 카운터 값 생성
+
 
 #### **Top Module**
  : 저번 시간에 만든 second counter  및 Submodule 1/2를 이용하여 실습 장비의 LED에 맞는 Display Module 설계
@@ -53,5 +57,5 @@ Q2
 
 `Please fill up your source`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MjcxMDk0OCwtMTUxMzUzMjU0Nl19
+eyJoaXN0b3J5IjpbLTkwMDQxNjM2MywtMTUxMzUzMjU0Nl19
 -->
