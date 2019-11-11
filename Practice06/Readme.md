@@ -5,10 +5,10 @@
 ### **Digital Clock Design**
 
 #### **Submodule 1** 
-: controller - 
+: controller - mode, position 제어 / debounce 조절
 
 #### **Submodule 2** 
-: 0~59의 값을 갖는 6bit 입력 신호를 받아 십의 자리 수와 일의 자리 수를 각각 4bit으로 출력
+: minsec - se
 
 #### **Top Module**
  : 저번 시간에 만든 second counter  및 Submodule 1/2를 이용하여 실습 장비의 LED에 맞는 Display Module 설계
@@ -53,5 +53,5 @@ Q2
 
 `Please fill up your source`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MzQzNzUsLTE1MTM1MzI1NDZdfQ==
+eyJoaXN0b3J5IjpbLTc5MjcxMDk0OCwtMTUxMzUzMjU0Nl19
 -->
