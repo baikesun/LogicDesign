@@ -13,9 +13,11 @@
 #### **Submodule 3** 
 : hms_cnt - min, sec 카운터 값 생성
 
+#### **Submodule 4** 
+: debounce - 스위치 누를 때 튕기는 값 조정
 
 #### **Top Module**
- : 저번 시간에 만든 second counter  및 Submodule 1/2를 이용하여 실습 장비의 LED에 맞는 Display Module 설계
+ : 저번 시간에 만든 fnd_dec, doled_disp 및 Submodule 1/2를 이용하여 실습 장비의 LED에 맞는 Display Module 설계
 
 ### FPGA 실습 (팀)
  : 6개의 LED 중 가장 오른쪽 2개의 LED에 1초 간격으로 0~59까지 증가하는 Counter 값 Display
@@ -57,5 +59,5 @@ Q2
 
 `Please fill up your source`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMDQxNjM2MywtMTUxMzUzMjU0Nl19
+eyJoaXN0b3J5IjpbNTk4NzY1NzM5LC0xNTEzNTMyNTQ2XX0=
 -->
