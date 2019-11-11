@@ -1,11 +1,11 @@
-# Lab 06
+# Lab 08
 
 ## 실습 내용
 
-### **7 – Segment Display Decoder (개별)**
+### **Digital Clock Design**
 
 #### **Submodule 1** 
-: 0~9의 값을 갖는 4bit 입력 신호를 받아 7bit FND  segment  값 출력
+: controller - 
 
 #### **Submodule 2** 
 : 0~59의 값을 갖는 6bit 입력 신호를 받아 십의 자리 수와 일의 자리 수를 각각 4bit으로 출력
@@ -53,5 +53,5 @@ Q2
 
 `Please fill up your source`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE1MzExOTEzLC0xNTEzNTMyNTQ2XX0=
+eyJoaXN0b3J5IjpbMTM1MzQzNzUsLTE1MTM1MzI1NDZdfQ==
 -->
