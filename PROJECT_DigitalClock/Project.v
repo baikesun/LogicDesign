@@ -9,7 +9,7 @@
 //	RELEASE HISTORY
 //	--------------------------------------------------
 //	VERSION			DATE
-//	0.0			2019-11-18
+//	0.0			2019-11-21
 //	--------------------------------------------------
 //	PURPOSE			: Digital Clock
 //	==================================================
@@ -267,12 +267,17 @@ module	controller(
 		o_sec_clk,
 		o_min_clk,
 		o_hou_clk,
+		//o_day_clk,
+		//o_mon_clk,
+		//o_yea_clk,
 		o_alarm_sec_clk,
 		o_alarm_min_clk,
 		o_alarm_hou_clk,
 		i_max_hit_sec,
 		i_max_hit_min,
 		i_max_hit_hou,
+		//i_max_hit_day,
+		//i_max_hit_mon,
 		i_sw0,
 		i_sw1,
 		i_sw2,
@@ -282,17 +287,27 @@ module	controller(
 
 	output	[1:0]	o_mode			;
 	output	[1:0]	o_position		;
+
 	output		o_alarm_en		;
+
 	output		o_sec_clk		;
 	output		o_min_clk		;
 	output		o_hou_clk		;
+
 	output		o_alarm_sec_clk		;
 	output		o_alarm_min_clk		;
 	output		o_alarm_hou_clk		;
 	
+	//output		o_day_clk		;
+	//output		o_mon_clk		;
+	//output		o_yea_clk		;
+
 	input		i_max_hit_sec		;
 	input		i_max_hit_min		;
 	input		i_max_hit_hou		;
+
+	//input		i_max_hit_day		;
+	//input		i_max_hit_mon		;
 	
 	input		i_sw0			;
 	input		i_sw1			;
@@ -304,7 +319,8 @@ module	controller(
 
 	parameter	MODE_CLOCK = 2'b00	;
 	parameter	MODE_SETUP = 2'b01	;
-	parameter	MODE_ALARM = 2'b10	;
+	//parameter	MODE_CALEN = 2'b10	;
+	parameter	MODE_ALARM = 2'b11	;
 	
 	parameter	POS_SEC	= 2'd0		;
 	parameter	POS_MIN	= 2'd1		;
@@ -364,12 +380,17 @@ module	controller(
 
 	reg	[1:0]	o_position		;
 
-	always @(posedge sw1 or negedge rst_n) begin
+	always @(posedge sw1 or negedge rst_n) begin		//edit to change position directly to 'second' after 'hour'.
 		if(rst_n == 1'b0) begin
 			o_position <= POS_SEC;
 		end 
 		else begin
-			o_position <= o_position + 1'b1;
+			if(o_position >= POS_HOU) begin
+				o_position <= POS_SEC		;
+			end
+			else begin
+				o_position <= o_position + 1'b1	;
+			end
 		end
 	end
 	
@@ -395,9 +416,15 @@ module	controller(
 	reg		o_sec_clk		;
 	reg		o_min_clk		;
 	reg		o_hou_clk		;
+
 	reg		o_alarm_sec_clk		;
 	reg		o_alarm_min_clk		;
 	reg		o_alarm_hou_clk		;
+
+	//reg		o_day_clk		;
+	//reg		o_mon_clk		;
+	//reg		o_yea_clk		;
+
 	always @(*) begin
 		case(o_mode)
 			MODE_CLOCK : begin
@@ -407,6 +434,9 @@ module	controller(
 				o_alarm_sec_clk = 1'b0;
 				o_alarm_min_clk = 1'b0;
 				o_alarm_hou_clk = 1'b0;
+				//o_day_clk = i_max_hit_hou;
+				//o_mon_clk = i_max_hit_day;
+				//o_yea_clk = i_max_hit_mon;
 			end
 			MODE_SETUP : begin
 				case(o_position)
@@ -417,6 +447,9 @@ module	controller(
 						o_alarm_sec_clk = 1'b0;
 						o_alarm_min_clk = 1'b0;
 						o_alarm_hou_clk = 1'b0;
+						//o_day_clk = 1'b0;
+						//o_mon_clk = 1'b0;
+						//o_yea_clk = 1'b0;
 					end
 					POS_MIN : begin
 						o_sec_clk = 1'b0;
@@ -425,6 +458,9 @@ module	controller(
 						o_alarm_sec_clk = 1'b0;
 						o_alarm_min_clk = 1'b0;
 						o_alarm_hou_clk = 1'b0;
+						//o_day_clk = 1'b0;
+						//o_mon_clk = 1'b0;
+						//o_yea_clk = 1'b0;
 					end
 					POS_HOU : begin
 						o_sec_clk = 1'b0;
@@ -433,10 +469,50 @@ module	controller(
 						o_alarm_sec_clk = 1'b0;
 						o_alarm_min_clk = 1'b0;
 						o_alarm_hou_clk = 1'b0;
+						//o_day_clk = 1'b0;
+						//o_mon_clk = 1'b0;
+						//o_yea_clk = 1'b0;
 					end
 						
 				endcase
 			end
+			/*MODE_CALEN : begin
+				case(o_position)
+					POS_SEC : begin
+						o_sec_clk = clk_1hz;
+						o_min_clk = i_max_hit_sec;
+						o_hou_clk = i_max_hit_min;
+						o_alarm_sec_clk = 1'b0;
+						o_alarm_min_clk = 1'b0;
+						o_alarm_hou_clk = 1'b0;
+						o_day_clk = ~sw2;
+						o_mon_clk = 1'b0;
+						o_yea_clk = 1'b0;
+					end
+					POS_MIN : begin
+						o_sec_clk = clk_1hz;
+						o_min_clk = i_max_hit_sec;
+						o_hou_clk = i_max_hit_min;
+						o_alarm_sec_clk = 1'b0;
+						o_alarm_min_clk = 1'b0;
+						o_alarm_hou_clk = 1'b0;
+						o_day_clk = 1'b0;
+						o_mon_clk = ~sw2;
+						o_yea_clk = 1'b0;
+					end
+					POS_HOU : begin
+						o_sec_clk = clk_1hz;
+						o_min_clk = i_max_hit_sec;
+						o_hou_clk = i_max_hit_min;
+						o_alarm_sec_clk = 1'b0;
+						o_alarm_min_clk = 1'b0;
+						o_alarm_hou_clk = 1'b0;
+						o_day_clk = 1'b0;
+						o_mon_clk = 1'b0;
+						o_yea_clk = ~sw2;
+					end
+				endcase
+			end*/
 			MODE_ALARM : begin
 				case(o_position)
 					POS_SEC : begin
@@ -446,6 +522,9 @@ module	controller(
 						o_alarm_sec_clk = ~sw2;
 						o_alarm_min_clk = 1'b0;
 						o_alarm_hou_clk = 1'b0;
+						//o_day_clk = i_max_hit_hou;
+						//o_mon_clk = i_max_hit_day;
+						//o_yea_clk = i_max_hit_mon;
 					end
 					POS_MIN : begin
 						o_sec_clk = clk_1hz;
@@ -454,6 +533,9 @@ module	controller(
 						o_alarm_sec_clk = 1'b0;
 						o_alarm_min_clk = ~sw2;
 						o_alarm_hou_clk = 1'b0;
+						//o_day_clk = i_max_hit_hou;
+						//o_mon_clk = i_max_hit_day;
+						//o_yea_clk = i_max_hit_mon;
 					end
 					POS_HOU : begin
 						o_sec_clk = clk_1hz;
@@ -462,6 +544,9 @@ module	controller(
 						o_alarm_sec_clk = 1'b0;
 						o_alarm_min_clk = 1'b0;
 						o_alarm_hou_clk = ~sw2;
+						//o_day_clk = i_max_hit_hou;
+						//o_mon_clk = i_max_hit_day;
+						//o_yea_clk = i_max_hit_mon;
 					end
 				endcase
 			end
@@ -472,6 +557,9 @@ module	controller(
 				o_alarm_sec_clk = 1'b0;
 				o_alarm_min_clk = 1'b0;
 				o_alarm_hou_clk = 1'b0;
+				//o_day_clk = 1'b0;
+				//o_mon_clk = 1'b0;
+				//o_yea_clk = 1'b0;
 			end
 		endcase
 	end
@@ -484,15 +572,23 @@ endmodule
 module	minsec(	o_sec,
 		o_min,
 		o_hou,
+		//o_day,
+		//o_mon,
+		//o_yea,
 		o_max_hit_sec,
 		o_max_hit_min,
 		o_max_hit_hou,
+		//o_max_hit_day,
+		//o_max_hit_mon,
 		o_alarm,
 		i_mode,
 		i_position,
 		i_sec_clk,
 		i_min_clk,
 		i_hou_clk,
+		//i_day_clk,
+		//i_mon_clk,
+		//i_yea_clk,
 		i_alarm_sec_clk,
 		i_alarm_min_clk,
 		i_alarm_hou_clk,
@@ -503,9 +599,14 @@ module	minsec(	o_sec,
 	output	[5:0]	o_sec		;
 	output	[5:0]	o_min		;
 	output	[5:0]	o_hou		;
+	output	[5:0]	o_day		;
+	output	[5:0]	o_mon		;
+	output	[5:0]	o_yea		;
 	output		o_max_hit_sec	;
 	output		o_max_hit_min	;
 	output		o_max_hit_hou	;
+	output		o_max_hit_day	;
+	output		o_max_hit_mon	;
 	output		o_alarm		;
 	
 	input	[1:0]	i_mode		;
@@ -513,6 +614,9 @@ module	minsec(	o_sec,
 	input		i_sec_clk	;
 	input		i_min_clk	;
 	input		i_hou_clk	;
+	input		i_day_clk	;
+	input		i_mon_clk	;
+	input		i_yea_clk	;
 	input		i_alarm_sec_clk	;
 	input		i_alarm_min_clk	;
 	input		i_alarm_hou_clk	;
@@ -523,7 +627,9 @@ module	minsec(	o_sec,
 
 	parameter	MODE_CLOCK	= 2'b00	;
 	parameter	MODE_SETUP	= 2'b01	;
-	parameter	MODE_ALARM	= 2'b10	;
+	parameter	MODE_CALEN	= 2'b10	;
+	parameter	MODE_ALARM	= 2'b11	;
+
 	parameter	POS_SEC		= 2'b00	;
 	parameter	POS_MIN		= 2'b01	;
 	parameter	POS_HOU		= 2'b10	;
@@ -558,6 +664,8 @@ module	minsec(	o_sec,
 				.i_max_cnt	(	6'd23		),
 				.clk		(	i_hou_clk	),
 				.rst_n		(	rst_n		));
+
+	
 
 	//	MODE_ALARM
 	wire	[5:0]	alarm_sec	;
@@ -628,6 +736,80 @@ module	minsec(	o_sec,
 	end
 
 endmodule
+
+//	--------------------------------------------------
+//	Calender : indicates the date
+//	--------------------------------------------------
+module calender(
+		o_day_clk,
+		o_mon_clk,
+		o_yea_clk,
+		i_max_hit_hou,
+		i_max_hit_day,
+		i_max_hit_mon,
+		clk,
+		rst_n);
+
+	output		o_day_clk	;
+	output		o_mon_clk	;
+	output		o_yea_clk	;
+
+	input		i_max_hit_hou	;
+	input		i_max_hit_day	;
+	input		i_max_hit_mon	;
+
+	input		clk		;
+	input		rst_n		;
+
+	wire	[4:0]	max_day		;
+
+	always @(*) begin
+		case(o_month) begin
+			4'd1  : max_day = 5'd31		;
+			4'd2  : max_day = 5'd28		;
+			4'd3  : max_day = 5'd31		;
+			4'd4  : max_day = 5'd30		;
+			4'd5  : max_day = 5'd31		;
+			4'd6  : max_day = 5'd30		;
+			4'd7  : max_day = 5'd31		;
+			4'd8  : max_day = 5'd31		;
+			4'd9  : max_day = 5'd30		;
+			4'd10 : max_day = 5'd31		;
+			4'd11 : max_day = 5'd30		;
+			4'd12 : max_day = 5'd31		;
+			default : max_day = 5'd0	;
+		endcase
+	end
+	
+	wire	[4:0]	day		;
+	wire		max_hit_day	;
+	
+	hms_cnt		u_hms_cnt_day	(
+				.o_hms_cnt	(	day		),
+				.o_max_hit	( 	max_hit_day	),
+				.i_max_cnt	(	max_day		),
+				.clk		(	clk		),
+				.rst_n		(	rst_n		));
+
+	wire	[3:0]	month		;
+	wire		max_hit_mon	;
+	
+	hms_cnt		u_hms_cnt_month	(
+				.o_hms_cnt	(	month		),
+				.o_max_hit	( 	max_hit_mon	),
+				.i_max_cnt	(	6'd12		),
+				.clk		(	clk		),
+				.rst_n		(	rst_n		));
+
+	wire	[4:0]	year		;
+	
+	hms_cnt		u_hms_cnt_year	(
+				.o_hms_cnt	(	year		),
+				.o_max_hit	( 			),
+				.i_max_cnt	(	6'd99		),
+				.clk		(	clk		),
+				.rst_n		(	rst_n		));
+	
 
 module	buzz(
 		o_buzz,
