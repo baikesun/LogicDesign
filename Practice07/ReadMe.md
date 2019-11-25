@@ -48,9 +48,9 @@
 
 
 ### Waveform
-: waveform에서 가장 먼저 확인한 것은 'cnt_h(counter high)가 9ms에서, cnt_l(counter low)가 4.5ms에서 변하는가' 이다.
+: waveform에서 가장 먼저 확인한 것은 'cnt_h(counter high)가 9ms에서, cnt_l(counter low)이 4.5ms에서 변하는가' 이다.
 : 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MzE1NDQ4OCwxNDM3NTQ1ODY0LDIxMz
-k0MTg0ODcsMTM4NTkyOTIzMF19
+eyJoaXN0b3J5IjpbNzI4MTI0MTE2LDE0Mzc1NDU4NjQsMjEzOT
+QxODQ4NywxMzg1OTI5MjMwXX0=
 -->
