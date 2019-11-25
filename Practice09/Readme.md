@@ -41,6 +41,7 @@
 ### **module ir_rx**
 
 : fpga가 리모콘에서 전송된 정보를 수신할 수 있도록 구성된다.
+
 : 코드에 대한 자세한 설명은 주석으로 보충한다.
 
 ![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/code(1).JPG)
