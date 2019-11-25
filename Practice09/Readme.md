@@ -44,22 +44,22 @@
 
 : 코드에 대한 자세한 설명은 주석으로 보충한다.
 
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/code(1).JPG)
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/code(2).JPG)
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/code(3).JPG)
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/code(4).JPG)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/code(1).jpg)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/code(2).jpg)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/code(3).jpg)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/code(4).jpg)
 
 ### **FPGA 실습**
  : 리모콘의 버튼을 누른 뒤 led에 해당 버튼에 대응하는 24 bit data가 나타나는지 확인하였다. 아래의 사진은 전원 버튼을 누른 뒤 확인한 내용이다.
   
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/fpga_on button.JPG)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/fpga.jpg)
 
 ### **Waveform**
 : waveform에서 가장 먼저 확인한 것은 'cnt_h(counter high)가 9ms에서, cnt_l(counter low)이 4.5ms에서 변하는가' 이다.
 : 
 
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/waveform.JPG)
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/waveform_cnt_l.JPG)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/waveform.jpg)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/waveform_cnt_l.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEwOTY1MTk4XX0=
+eyJoaXN0b3J5IjpbLTg3OTAyNjY5OCw4MTA5NjUxOThdfQ==
 -->
