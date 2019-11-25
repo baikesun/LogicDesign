@@ -22,6 +22,10 @@
 #### **Top Module**
  : 각각의 submodule을 연결하여 리모콘을 작동시켰을 때 해당 버튼에 대응하는 24비트 데이터를 led에 표현되도록 함.
 
+### **적외선 통신 - 송신과 수신**
+: 송신부 - 적외선을 발생시켜 정보를 전달한다. 이 때, 리모콘의 버튼에 따라 서로 다른 정보를 전달할 수 있어야 한다.
+			   - 신호를 "MODULATE"하여  전달하
+
 ### **module ir_rx**
 : 
 
@@ -31,5 +35,6 @@
  
 : debounce module을 이용하여 오류를 수정
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzOTQxODQ4NywtMTUxMzUzMjU0Nl19
+eyJoaXN0b3J5IjpbMTY0OTU4MzMwLDIxMzk0MTg0ODcsLTE1MT
+M1MzI1NDZdfQ==
 -->
