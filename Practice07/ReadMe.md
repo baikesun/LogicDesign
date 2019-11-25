@@ -1,11 +1,11 @@
-# Lab 08
+# Lab 10
 
 ## 실습 내용
 
-### **Digital Clock Design**
+### **IR CONTROLLER**
 
 #### **Submodule 1** 
-: controller - mode, position 제어 / debounce 조절
+: nco - 
 
 #### **Submodule 2** 
 : minsec - max_hit 받아서 sec 59 지나면 min 1 증가
@@ -25,5 +25,5 @@
  
 : debounce module을 이용하여 오류를 수정
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc1NTk1NjAyLDEzODU5MjkyMzBdfQ==
+eyJoaXN0b3J5IjpbMTU0OTcyMDA5NCwxMzg1OTI5MjMwXX0=
 -->
