@@ -61,5 +61,5 @@
 ![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/waveform.jpg)
 ![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/capture/waveform_cnt_l.jpg)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEwOTY1MTk4XX0=
+eyJoaXN0b3J5IjpbLTg3OTAyNjY5OCw4MTA5NjUxOThdfQ==
 -->
