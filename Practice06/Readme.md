@@ -42,12 +42,14 @@
 : ir_rx 모듈은 fpga가 리모콘의 정보를 수신할 수 있도록 구성되었다.
 : 
 
-### FPGA 실습 (팀)
- : 분, 초가 작동되는 디지털 시계를 구현하고, mode를 바꿔 디지털 시계의 시간을 조절할 수 있도록 함
+### FPGA 실습
+ : 리모콘의 버튼을 누른 뒤 led에 해당 버튼에 대응하는 24 bit data가 나타나는지 확인하였다. 아래의 사진은 ㅓ
   
  
 : debounce module을 이용하여 오류를 수정
+
+### Waveform
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzUyMTI1MDUsMTQzNzU0NTg2NCwyMT
-M5NDE4NDg3LC0xNTEzNTMyNTQ2XX0=
+eyJoaXN0b3J5IjpbMTc1Njc1NDExMCwxNDM3NTQ1ODY0LDIxMz
+k0MTg0ODcsLTE1MTM1MzI1NDZdfQ==
 -->
