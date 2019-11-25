@@ -39,6 +39,7 @@
 - Data Code : 송신 데이터. 실제로 전달하고자 하는 정보를 담는 부분. Low로 표시되는 부분의 길이로 bit를 조절할 수 있다. (ex. 0.565ms = 0 bit , 1.69ms = 1 bit)
 
 ### **module ir_rx**
+: ir_rx 모듈은 fpga가 리모콘의 정보를 수신할 수 있도록 구성되었다.
 : 
 
 ### FPGA 실습 (팀)
@@ -47,6 +48,6 @@
  
 : debounce module을 이용하여 오류를 수정
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNzU0NTg2NCwyMTM5NDE4NDg3LDEzOD
-U5MjkyMzBdfQ==
+eyJoaXN0b3J5IjpbLTEzNzUyMTI1MDUsMTQzNzU0NTg2NCwyMT
+M5NDE4NDg3LDEzODU5MjkyMzBdfQ==
 -->
