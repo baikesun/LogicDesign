@@ -38,11 +38,11 @@
 - Custom Code : 회사 정보를 나타냄. 회사 별로 특정 코드를 가지고 있어, 송신하는 회사의 정보를 담는다.
 - Data Code : 송신 데이터. 실제로 전달하고자 하는 정보를 담는 부분. Low로 표시되는 부분의 길이로 bit를 조절할 수 있다. (ex. 0.565ms = 0 bit , 1.69ms = 1 bit)
 
-### **module ir_rx**
+### **module ir_rx** 
 : ir_rx 모듈은 fpga가 리모콘의 정보를 수신할 수 있도록 구성되었다.
-: 
+: 코드에 대한 자세한 설명은 주석으로 보충하였다.
 
-### FPGA 실습
+### *FPGA 실습
  : 리모콘의 버튼을 누른 뒤 led에 해당 버튼에 대응하는 24 bit data가 나타나는지 확인하였다. 아래의 사진은 전원 버튼을 누른 뒤 확인한 내용이다.
   
 
@@ -51,6 +51,6 @@
 : waveform에서 가장 먼저 확인한 것은 'cnt_h(counter high)가 9ms에서, cnt_l(counter low)이 4.5ms에서 변하는가' 이다.
 : 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI4MTI0MTE2LDE0Mzc1NDU4NjQsMjEzOT
-QxODQ4NywxMzg1OTI5MjMwXX0=
+eyJoaXN0b3J5IjpbMTY1Njc2MzAyNyw3MjgxMjQxMTYsMTQzNz
+U0NTg2NCwyMTM5NDE4NDg3LDEzODU5MjkyMzBdfQ==
 -->
