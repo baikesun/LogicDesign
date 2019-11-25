@@ -40,9 +40,8 @@
 
 ### **module ir_rx**
 
-: fpga가 리모콘에서 전송된 정보를 수신할 수 있도록 구성된다.
-
-: 코드에 대한 자세한 설명은 주석으로 보충한다.
+:fpga가 리모콘에서 전송된 정보를 수신할 수 있도록 구성된다.
+:코드에 대한 자세한 설명은 주석으로 보충한다.
 
 ### **FPGA 실습**
  : 리모콘의 버튼을 누른 뒤 led에 해당 버튼에 대응하는 24 bit data가 나타나는지 확인하였다. 아래의 사진은 전원 버튼을 누른 뒤 확인한 내용이다.
@@ -53,6 +52,7 @@
 : waveform에서 가장 먼저 확인한 것은 'cnt_h(counter high)가 9ms에서, cnt_l(counter low)이 4.5ms에서 변하는가' 이다.
 : 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI4ODM1NzY0LDcyODEyNDExNiwxNDM3NT
-Q1ODY0LDIxMzk0MTg0ODcsLTE1MTM1MzI1NDZdfQ==
+eyJoaXN0b3J5IjpbODEwOTY1MTk4LDMyODgzNTc2NCw3MjgxMj
+QxMTYsMTQzNzU0NTg2NCwyMTM5NDE4NDg3LC0xNTEzNTMyNTQ2
+XX0=
 -->
