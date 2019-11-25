@@ -14,7 +14,10 @@
 : double_fig_sep - 두 자리 정수를 왼쪽과 오른쪽 값으로 분리
 
 #### **Submodule 4** 
-: debounce - 스위치 누를 때 튕기는 값 조정
+: led_disp - 각각의 segment를 led에 display
+
+####**Submodule 5**
+: ir_rx - 
 
 #### **Top Module**
  : 저번 시간에 만든 fnd_dec, double_fig_sep, led_disp를 이용하여 디지털 시계의 분, 초 부분 구현
@@ -25,5 +28,5 @@
  
 : debounce module을 이용하여 오류를 수정
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM3NTk1OTk0LDEzODU5MjkyMzBdfQ==
+eyJoaXN0b3J5IjpbLTIwOTE1MTg2MDEsMTM4NTkyOTIzMF19
 -->
