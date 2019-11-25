@@ -28,7 +28,9 @@
 : 수신부 - 포토다이오드(빛에너지->전기에너지)를 이용하여 송신부에서 받은 적외선의 빛 에너지를 전기 에너지로 변환시킨다.
 			   - 송신부에서 전송한 modulate된 빛을 다시 원래의 형태로 돌리기 위해 "DEMODULATION"과정을 거친다. 
 : 신호 구성 - 신호를 전송할 때 필요한 신호를 콕 집어서 해석할 수 있게 하기 위해 특정 순서에 맞추어 신호를 전송한다.
-					- Leader Code -> Custom Code -> Data Code 순서로 전송하며 Custom과 Data 부분은 각각 16bit으로 구성된다. (앞 8bit는 실제로 전송하고 싶은 정보를 담고, 뒤 8bit
+					- Leader Code -> Custom Code -> Data Code 순서로 전송하며 Custom과 Data 부분은 각각 16bit으로 구성된다. (앞 8bit는 실제로 전송하고 싶은 정보를 담고, 뒤 8bit는 앞의 data를 반전시킨 형태를 담는다. data 전송 과정에서의 오류를 막기 위한 방법이다.)
+					- Leader Code : 프레임 모드 선택, 버튼을 가볍게 누를 때와 오랫동안 꾹 누를 때를 구분할 수 있음.
+					- 
 
 ### **module ir_rx**
 : 
@@ -39,6 +41,6 @@
  
 : debounce module을 이용하여 오류를 수정
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MDc0Mzk5LDIxMzk0MTg0ODcsMTM4NT
-kyOTIzMF19
+eyJoaXN0b3J5IjpbLTI3ODcyMjU5MywyMTM5NDE4NDg3LDEzOD
+U5MjkyMzBdfQ==
 -->
