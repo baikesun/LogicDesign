@@ -30,6 +30,8 @@
 : 신호 구성 - 신호를 전송할 때 필요한 신호를 콕 집어서 해석할 수 있게 하기 위해 특정 순서에 맞추어 신호를 전송한다.
 					- Leader Code -> Custom Code -> Data Code 순서로 전송하며 Custom과 Data 부분은 각각 16bit으로 구성된다. (앞 8bit는 실제로 전송하고 싶은 정보를 담고, 뒤 8bit는 앞의 data를 반전시킨 형태를 담는다. data 전송 과정에서의 오류를 막기 위한 방법이다.)
 					- Leader Code : 프레임 모드 선택, 버튼을 가볍게 누를 때와 오랫동안 꾹 누를 때를 구분할 수 있음.
+					- Custom Code : 회사 정보를 나타냄. 회사 별로 특정 코드를 가지고 있어, 송신하는 회사의 정보를 담는다.
+					- Data Code : 송신 데이터. 실제로 전달하고자 하는 정보를 담는 부분. Low로 표시되는 부분의 길이로 
 
 ### **module ir_rx**
 : 
@@ -40,6 +42,6 @@
  
 : debounce module을 이용하여 오류를 수정
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzE1Nzc5NTYsMjEzOTQxODQ4NywtMT
-UxMzUzMjU0Nl19
+eyJoaXN0b3J5IjpbMTc4NTExMzIwOCwyMTM5NDE4NDg3LC0xNT
+EzNTMyNTQ2XX0=
 -->
