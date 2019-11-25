@@ -27,7 +27,8 @@
 			   - 신호를 "MODULATE"하여  전달한다. 이 과정에서 송신하는 회사에 따라 소유하는 주파수에 맞추기 위해 carrier signal을 추가한다.
 : 수신부 - 포토다이오드(빛에너지->전기에너지)를 이용하여 송신부에서 받은 적외선의 빛 에너지를 전기 에너지로 변환시킨다.
 			   - 송신부에서 전송한 modulate된 빛을 다시 원래의 형태로 돌리기 위해 "DEMODULATION"과정을 거친다. 
-: 신호 구성 - 신호를 전송할 때 필요한 신호를 
+: 신호 구성 - 신호를 전송할 때 필요한 신호를 콕 집어서 해석할 수 있게 하기 위해 특정 순서에 맞추어 신호를 전송한다.
+					- Leader Code -> Custom Code -> Data Code 순서로 전송하며 Custom과 Data 부분은 각각 16bit으로 구성된다. (앞 8bit는 실제로 전송하고 싶은 정보를 담고, 뒤 8bit
 
 ### **module ir_rx**
 : 
@@ -38,6 +39,6 @@
  
 : debounce module을 이용하여 오류를 수정
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzA2NTUwNjIsMjEzOTQxODQ4NywxMz
-g1OTI5MjMwXX0=
+eyJoaXN0b3J5IjpbLTk2MDc0Mzk5LDIxMzk0MTg0ODcsMTM4NT
+kyOTIzMF19
 -->
