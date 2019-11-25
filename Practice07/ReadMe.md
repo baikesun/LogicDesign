@@ -43,13 +43,13 @@
 : 
 
 ### FPGA 실습
- : 리모콘의 버튼을 누른 뒤 led에 해당 버튼에 대응하는 24 bit data가 나타나는지 확인하였다. 아래의 사진은 전원 버튼
+ : 리모콘의 버튼을 누른 뒤 led에 해당 버튼에 대응하는 24 bit data가 나타나는지 확인하였다. 아래의 사진은 전원 버튼을 누른 뒤 확인한 내용이다.
   
- 
-: debounce module을 이용하여 오류를 수정
+
 
 ### Waveform
+: waveform에서 가장 먼저
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NTQzNzMwMywxNDM3NTQ1ODY0LDIxMz
+eyJoaXN0b3J5IjpbLTc4NzY1NzY1OCwxNDM3NTQ1ODY0LDIxMz
 k0MTg0ODcsMTM4NTkyOTIzMF19
 -->
