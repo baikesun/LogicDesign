@@ -17,7 +17,7 @@
 : led_disp - 각각의 segment를 led에 display
 
 ####**Submodule 5**
-: ir_rx - 
+: ir_rx - 밑에 추가 설명
 
 #### **Top Module**
  : 저번 시간에 만든 fnd_dec, double_fig_sep, led_disp를 이용하여 디지털 시계의 분, 초 부분 구현
@@ -28,5 +28,5 @@
  
 : debounce module을 이용하여 오류를 수정
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTE1MTg2MDEsMTM4NTkyOTIzMF19
+eyJoaXN0b3J5IjpbMTI4NzI3Njc3MSwxMzg1OTI5MjMwXX0=
 -->
