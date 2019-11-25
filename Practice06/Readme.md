@@ -22,7 +22,8 @@
 #### **Top Module**
  : 각각의 submodule을 연결하여 리모콘을 작동시켰을 때 해당 버튼에 대응하는 24비트 데이터를 led에 표현되도록 함.
 
-### 
+### **module ir_rx**
+: 
 
 ### FPGA 실습 (팀)
  : 분, 초가 작동되는 디지털 시계를 구현하고, mode를 바꿔 디지털 시계의 시간을 조절할 수 있도록 함
@@ -30,5 +31,5 @@
  
 : debounce module을 이용하여 오류를 수정
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxOTEzOTA0OSwtMTUxMzUzMjU0Nl19
+eyJoaXN0b3J5IjpbMjEzOTQxODQ4NywtMTUxMzUzMjU0Nl19
 -->
