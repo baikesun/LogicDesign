@@ -5,13 +5,13 @@
 ### **IR CONTROLLER**
 
 #### **Submodule 1** 
-: nco - 
+: nco - clk, cnt 생성
 
 #### **Submodule 2** 
-: minsec - max_hit 받아서 sec 59 지나면 min 1 증가
+: fnd_dec - 7 segment 생성
 
 #### **Submodule 3** 
-: hms_cnt - min, sec 카운터 값 생성
+: double_fig_sep - 두 자리 정수를 왼쪽과 오른쪽 값으로
 
 #### **Submodule 4** 
 : debounce - 스위치 누를 때 튕기는 값 조정
@@ -25,5 +25,5 @@
  
 : debounce module을 이용하여 오류를 수정
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0OTcyMDA5NCwtMTUxMzUzMjU0Nl19
+eyJoaXN0b3J5IjpbLTI3MTQwMDQ3NCwtMTUxMzUzMjU0Nl19
 -->
