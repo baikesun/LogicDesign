@@ -44,10 +44,10 @@
 
 : 코드에 대한 자세한 설명은 주석으로 보충한다.
 
-![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/code1.jpg)
-![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/code2.jpg)
-![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/code3.jpg)
-![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/code4.jpg)
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/code1.JPG)
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/code2.JPG)
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/code3.JPG)
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/code4.JPG)
 
 
 ### **FPGA 실습**
@@ -58,8 +58,8 @@
 ### **Waveform**
 : waveform에서 가장 먼저 확인한 것은 'cnt_h(counter high)가 9ms에서, cnt_l(counter low)이 4.5ms에서 변하는가' 이다.
 
-![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/waveform.jpg)
-![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/waveform_cnt_l.jpg)
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/waveform.JPG)
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/waveform_cnt_l.JPG)
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTMwOTU2MzU0NCwtNjMwMTE3NDU0LDgxMD
 k2NTE5OF19
