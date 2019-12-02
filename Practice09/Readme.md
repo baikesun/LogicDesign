@@ -44,10 +44,10 @@
 
 : 코드에 대한 자세한 설명은 주석으로 보충한다.
 
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/code(1).jpg)
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/code(2).jpg)
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/code(3).jpg)
-![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/code(4).jpg)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/code1.jpg)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/code2.jpg)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/code3.jpg)
+![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/code4.jpg)
 
 ### **FPGA 실습**
  : 리모콘의 버튼을 누른 뒤 led에 해당 버튼에 대응하는 24 bit data가 나타나는지 확인하였다. 아래의 사진은 전원 버튼을 누른 뒤 확인한 내용이다.
