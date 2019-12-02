@@ -44,10 +44,7 @@
 
 : 코드에 대한 자세한 설명은 주석으로 보충한다.
 
-<img src="Practice09/code1.JPG">
-<img src="http://github.com/baikesun/LogicDesign/Practice09/code2.JPG">
-<img src="http://github.com/baikesun/LogicDesign/Practice09/code3.JPG">
-<img src="http://github.com/baikesun/LogicDesign/Practice09/code4.JPG">
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/code1.jpg)
 <!--
 ![](./Practice09/code1.JPG)
 ![](./Practice09/code2.JPG)
