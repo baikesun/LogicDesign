@@ -44,10 +44,10 @@
 
 : 코드에 대한 자세한 설명은 주석으로 보충한다.
 
-![code1](./Practice09/code1.JPG)
-![code2](./Practice09/code2.JPG)
-![code3](./Practice09/code3.JPG)
-![code4](./Practice09/code4.JPG)
+![](./Practice09/code1.JPG)
+![](./Practice09/code2.JPG)
+![](./Practice09/code3.JPG)
+![](./Practice09/code4.JPG)
 
 ### **FPGA 실습**
  : 리모콘의 버튼을 누른 뒤 led에 해당 버튼에 대응하는 24 bit data가 나타나는지 확인하였다. 아래의 사진은 전원 버튼을 누른 뒤 확인한 내용이다.
