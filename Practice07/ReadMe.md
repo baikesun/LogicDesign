@@ -44,10 +44,7 @@
 
 : 코드에 대한 자세한 설명은 주석으로 보충한다.
 
-<img src="Practice09/code1.JPG">
-<img src="http://github.com/baikesun/LogicDesign/Practice09/code2.JPG">
-<img src="http://github.com/baikesun/LogicDesign/Practice09/code3.JPG">
-<img src="http://github.com/baikesun/LogicDesign/Practice09/code4.JPG">
+![](https://github.com/baikesun/LogicDesign/blob/master/Practice09/code1.jpg)
 <!--
 ![](./Practice09/code1.JPG)
 ![](./Practice09/code2.JPG)
@@ -68,7 +65,7 @@
 <!--![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/waveform.JPG)
 ![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/waveform_cnt_l.JPG)-->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMDExNzQ1NCw4MTA5NjUxOTgsMzI4OD
-M1NzY0LDcyODEyNDExNiwxNDM3NTQ1ODY0LDIxMzk0MTg0ODcs
-MTM4NTkyOTIzMF19
+eyJoaXN0b3J5IjpbLTg4MTkyMjc3MCwtNjMwMTE3NDU0LDgxMD
+k2NTE5OCwzMjg4MzU3NjQsNzI4MTI0MTE2LDE0Mzc1NDU4NjQs
+MjEzOTQxODQ4NywxMzg1OTI5MjMwXX0=
 -->
