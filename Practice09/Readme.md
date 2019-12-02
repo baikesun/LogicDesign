@@ -56,7 +56,6 @@
 
 ### **Waveform**
 : waveform에서 가장 먼저 확인한 것은 'cnt_h(counter high)가 9ms에서, cnt_l(counter low)이 4.5ms에서 변하는가' 이다.
-: 
 
 ![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/waveform.JPG)
 ![](http://github.com/baikesun/LogicDesign/blob/master/Practice09/waveform_cnt_l.JPG)
